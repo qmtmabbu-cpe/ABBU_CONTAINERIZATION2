@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+  
+   - name: Include config.yml
+     include_vars:
+       file: config.yml
+
+   - name: Build and run Lampstack
+     include_role:
+       name: lampstack
